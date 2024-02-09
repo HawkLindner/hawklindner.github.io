@@ -1,1 +1,80 @@
-<--Hawk file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Fun</title>
+<style>
+  /* Additional styles for fun */
+  .red { background: tomato; }
+  .blue { background: dodgerblue; }
+  .green { background: mediumseagreen; }
+  .orange { background: orange;}
+  .purple { background: rebeccapurple;}
+  .box{height : 100px; width : 100px;color :white;font-size : 2em;}
+.flex-container{
+    display:flex;
+    background-color: lightgrey;
+    justify-content : space-between;
+    
+}
+.flex-item{
+    display:flex;
+    align-items :center;
+    justify-content : center;  
+    margin : 15px;
+}
+@media (min-width:900px)
+{
+    .flex-container{
+        justify-content: center;
+    }
+    .box{
+        color : purple;
+    }
+}
+</style>
+<link href = "styles.css" rel = "stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>FlexBox practice</h1>
+        <nav class = "navBar">
+            <div >
+                <img src = "https://yt3.googleusercontent.com/x4UbYVdYRsmX-Bs3NbmIkzvAi7x5awb-rhTp51WQF_6NlkKfqXHIrKpoFd1-4MrMiAWQ2XTPOg=s176-c-k-c0x00ffffff-no-rj"
+                height = "100px" width = "100px">
+            </div>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a target = "_blank" href = "https://www.youtube.com/@hawkoffical">Youtube</a></li>
+                <li><a href = "aboutme.html">About Me</a></li>
+                <li><a href = "contact.html">Contact Me</a></li>
+            </ul>
+           
+        </nav>
+    </header>
+        
+    <main>
+        <section class="flex-container">
+            <div class="flex-item red box" >1</div>
+            <div class="flex-item blue box">2</div>
+            <div class="flex-item green box">3</div>
+            <div class="flex-item orange box">4</div>
+            <div class="flex-item purple box">5</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Do we need this?</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+<!-- GOAL: use embeded styles to make the width & height to be 100px
+and the text inside should be white and font size 2em
+-->
