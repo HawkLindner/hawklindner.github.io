@@ -24,10 +24,7 @@ nav > div > img{
     scale : (1.0)
     
 }
-h1.navTitle{
-    color: white;
-}
-nav>div>img:hover
+nav > div > img:hover
 {
     scale : (1.9);
 }
