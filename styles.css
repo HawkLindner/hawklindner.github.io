@@ -44,6 +44,13 @@ nav > div > img:hover
     transform: scale(1.2); 
     
     }
+    @media (min-width:900px)
+    {
+        .vid{
+            justify-content : space-evenly;
+            transform : scale(.5);
+        }
+    }
     .text{
         width: 100px;
 
