@@ -1,4 +1,5 @@
-body{width : 100vw; margin:0; height : 100vh;}
+body{display:flex; flex-direction:column;width : 100vw; margin:0; min-height : 100vh;}
+section{display:flex; align-items:center;justify-content: center;}
 nav {
     display : flex;
     justify-content : space-between;
@@ -16,7 +17,7 @@ nav > ul{
 }
 nav>ul>li {
     padding-left :1px;
-    margin-right: 20px;
+    margin-right: 50px;
     padding-top : 30px;
 }
 nav>ul>li > a{
@@ -38,11 +39,105 @@ nav > div > img {
 }
 nav > div > img:hover {
     transform: scale(1.3);
+    
 }
 section>div>a{
     display:flex;
     flex-direction:row;
 }
+footer{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background-color : #333;
+    color:white;
+    font-size:25px;
+    
+    position:bottom;
+    bottom:0;
+    width:100%;
+}
+/*Work for pac man animation by Riccardo at codepen.io. 
+https://codepen.io/Ferie/pen/abBVeER link to the website*/
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex-direction: row;
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Change to column layout */
+    overflow: hidden;
+    height: 16vh;
+    width: 100%;
+}
+
+.pacman {
+    position:relative;
+    background: transparent;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        top : -35px;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+    }
+
+    &::before {
+        animation: chunk-top .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &::after {
+        animation: chunk-bottom .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+}
+@keyframes chunk-top {
+    0%,
+    100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-80deg);
+    }
+}
+
+@keyframes chunk-bottom {
+    0%,
+    100% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+footer>p.move{
+    margin-right:15px;
+    font-size: 30px;
+    animation: slide-left 10s infinite;
+}
+/*my animation aspect*/
+@-webkit-keyframes slide-left{
+    0%{left:100%;}
+    100%{margin-left:-100vw;}
+}
+
+
+
+
+
 @media(max-width : 600px)
 {
     nav{flex-direction:column;justify-content: center;align-items:center;margin-bottom:30px}
