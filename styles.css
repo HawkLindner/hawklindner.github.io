@@ -1,17 +1,22 @@
+body{width : 100vw; margin:0; height : 100vh;}
 nav {
     display : flex;
     justify-content : space-between;
-    background-color : #333;   
+    background-color : #333;
+    margin-bottom:20px; 
+    
+     
 }
 nav > ul{
     display: flex;
     list-style-type : none;
     justify-content:stretch;
     margin-right:20px;
+    
 }
 nav>ul>li {
     padding-left :1px;
-    margin-right: 50px;
+    margin-right: 20px;
     padding-top : 30px;
 }
 nav>ul>li > a{
@@ -24,7 +29,7 @@ nav>ul>li>a:hover{
 }
 nav > div > img {
     border: 3px solid red;
-    border-radius: 60%;
+    border-radius: 50%;
     overflow: hidden;
     margin: 5px;
     transform: scale(1.0);
@@ -40,12 +45,21 @@ section>div>a{
 }
 @media(max-width : 600px)
 {
-    nav{flex-direction:column;align-items:center;}
+    nav{flex-direction:column;justify-content: center;align-items:center;margin-bottom:30px}
+    nav>ul{flex-direction:column; align-items:center; margin-right:0;}
+    nav>ul>li{margin-left:50px; margin-left : 0; margin-bottom:100px;}
+    .box{flex-direction:column; align-items:center;width : 100%;}
+    .flex-container{flex-direction:column;width : 100%;margin: 0 auto;}
+    #vid{max-width: 70%; margin:auto;}
+    div>a>img{max-width:100%;height:auto;}
+}
+@media (max-width : 1200px)
+{
+    nav{flex-direction:column;align-items:center;margin-bottom:30px}
     nav>ul{flex-direction:column; align-items:center;}
     nav>ul>li{margin-left:50px;}
     .box{flex-direction:column; align-items:center;}
-    .flex-container{flex-direction:column}
-    
+    .flex-container{flex-direction:column;}
 }
 
     
