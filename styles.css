@@ -1,4 +1,47 @@
-body{display:flex; flex-direction:column;width : 100vw; margin:0; min-height : 100vh;}
+.box{height : 100px; width : 100px;color :Black ;font-size : 16px; display: flex; justify-content :center;
+    align-items: center; flex-direction : column;}
+main{
+    background-color:lightgrey;
+    margin-top : -15pt;
+    flex:1;
+}
+.flex-container{
+    display:flex;
+    background-color: lightgrey;
+    justify-content :space-evenly;
+    align-items: center;
+    flex-direction:row;
+    width : 100vw;
+    margin: 0 auto;
+  flex-wrap:wrap;
+}
+
+#vid { 
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content:space-around;
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.3s; 
+    -webkit-transition-timing-function: ease; 
+    } 
+     
+#vid:hover { 
+    transform: scale(1.2); 
+    
+    }
+a>img{
+    padding : 15px;
+}
+
+div>a>img{
+    height:150;
+    width:300px;
+}
+
+
+body{display:flex; flex-direction:column;width : 100vw; margin:0; min-height : 110vh;overflow:none;}
 section{display:flex; align-items:center;justify-content: center;}
 nav {
     display : flex;
@@ -58,71 +101,7 @@ footer{
     bottom:0;
     width:100%;
 }
-/*Work for pac man animation by Riccardo at codepen.io. 
-https://codepen.io/Ferie/pen/abBVeER link to the website*/
 
-
-.container {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 20px;
-    flex-direction: row;
-    justify-content: center; /* Center content horizontally */
-    flex-direction: column; /* Change to column layout */
-    overflow: hidden;
-    height: 16vh;
-    width: 100%;
-}
-
-.pacman {
-    position:relative;
-    background: transparent;
-    z-index: 1;
-
-    &::before,
-    &::after {
-        position: absolute;
-        display: block;
-        top : -35px;
-        border-radius: 50%;
-        content: "";
-        height: 0px;
-        width: 0px;
-    }
-
-    &::before {
-        animation: chunk-top .5s ease infinite;
-        border: 35px solid #FFCC00;
-        border-left-color: transparent;
-        border-bottom-color: transparent;
-    }
-
-    &::after {
-        animation: chunk-bottom .5s ease infinite;
-        border: 35px solid #FFCC00;
-        border-right-color: transparent;
-        border-top-color: transparent;
-    }
-}
-@keyframes chunk-top {
-    0%,
-    100% {
-        transform: rotate(-45deg);
-    }
-    50% {
-        transform: rotate(-80deg);
-    }
-}
-
-@keyframes chunk-bottom {
-    0%,
-    100% {
-        transform: rotate(-40deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-}
 footer>p.move{
     margin-right:15px;
     font-size: 30px;
@@ -130,13 +109,9 @@ footer>p.move{
 }
 /*my animation aspect*/
 @-webkit-keyframes slide-left{
-    0%{left:100%;}
-    100%{margin-left:-100vw;}
+    0%{justify-content:flex-end;}
+    100%{justify-content:flex-start;}
 }
-
-
-
-
 
 @media(max-width : 600px)
 {
@@ -157,4 +132,79 @@ footer>p.move{
     .flex-container{flex-direction:column;}
 }
 
+
+/*Work for pac man animation by Riccardo at codepen.io. 
+https://codepen.io/Ferie/pen/abBVeER link to the website*/
+
+/*
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex-direction: row;
+    justify-content: center; 
+    flex-direction: column; 
+    overflow: hidden;
+    height: 16vh;
+    width: 100%;
+    overflow:none;
+}
+
+.pacman {
+    position:relative;
+    background: transparent;
+    z-index: 1;
+    overflow:none;
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        top : -35px;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+        overflow:none;
+    }
+
+    &::before {
+        animation: chunk-top .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        overflow:none;
+    }
+
+    &::after {
+        animation: chunk-bottom .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        overflow:none;
+    }
+}
+@keyframes chunk-top {
+    0%,
+    100% {
+        transform: rotate(-45deg);
+        overflow:none;
+    }
+    50% {
+        transform: rotate(-80deg);
+        overflow:none;
+    }
+}
+
+@keyframes chunk-bottom {
+    0%,
+    100% {
+        transform: rotate(-40deg);
+        overflow:none;
+    }
+    50% {
+        transform: rotate(0deg);
+        overflow:none;
+    }
+}*/
     
