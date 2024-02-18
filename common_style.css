@@ -1,0 +1,222 @@
+.box{height : 100px; width : 100px;color :Black ;font-size : 16px; display: flex; justify-content :center;
+    align-items: center; flex-direction : column;}
+main{
+    background-color:lightgrey;
+    margin-top : -15pt;
+    flex:1;
+}
+.flex-container{
+    display:flex;
+    background-color: lightgrey;
+    justify-content :space-evenly;
+    align-items: center;
+    flex-direction:row;
+    width : 100vw;
+    margin: 0 auto;
+  flex-wrap:wrap;
+}
+
+#vid { 
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content:space-around;
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.3s; 
+    -webkit-transition-timing-function: ease; 
+    } 
+     
+#vid:hover { 
+    transform: scale(1.2); 
+    
+    }
+a>img{
+    padding : 15px;
+}
+
+div>a>img{
+    height:150;
+    width:300px;
+}
+
+
+body{display:flex; flex-direction:column;width : 100vw; margin:0; min-height : 110vh;overflow:none;}
+section{display:flex; align-items:center;justify-content: center;}
+nav {
+    display : flex;
+    justify-content : space-between;
+    background-color : #333;
+    margin-bottom:20px; 
+    
+     
+}
+nav > ul{
+    display: flex;
+    list-style-type : none;
+    justify-content:stretch;
+    margin-right:20px;
+    
+}
+nav>ul>li {
+    padding-left :1px;
+    margin-right: 50px;
+    padding-top : 30px;
+}
+nav>ul>li > a{
+    text-decoration : none;
+    color : white;
+    font-size:24px;
+}
+nav>ul>li>a:hover{
+    color:blue;
+}
+nav > div > img {
+    border: 3px solid red;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px;
+    transform: scale(1.0);
+    transition: transform 0.3s ease; 
+    margin : 15px;
+}
+nav > div > img:hover {
+    transform: scale(1.3);
+    
+}
+section>div>a{
+    display:flex;
+    flex-direction:row;
+}
+footer{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color : #333;
+    color:white;
+    font-size:25px;
+    
+    position:bottom;
+    bottom:0;
+    width:100%;
+}
+
+.rocket{
+    animation: slide-right 10s infinite;
+}
+/*my animation aspect*/
+@keyframes slide-right {
+    0% {
+        transform: translateX(0) scaleX(1);
+    }
+    25% {
+        transform: translateX(93vw) scaleX(1);
+    }
+    50% {
+        transform: translateX(93vw) scaleX(-1);
+    }
+    75% {
+        transform: translateX(0) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+
+@media(max-width : 600px)
+{
+    nav{flex-direction:column;justify-content: center;align-items:center;margin-bottom:30px}
+    nav>ul{flex-direction:column; align-items:center; margin-right:0;}
+    nav>ul>li{margin-left:50px; margin-left : 0; margin-bottom:100px;}
+    .box{flex-direction:column; align-items:center;width : 100%;}
+    .flex-container{flex-direction:column;width : 100%;margin: 0 auto;}
+    #vid{max-width: 70%; margin:auto;}
+    div>a>img{max-width:100%;height:auto;}
+}
+@media (max-width : 1200px)
+{
+    nav{flex-direction:column;align-items:center;margin-bottom:30px}
+    nav>ul{flex-direction:column; align-items:center;}
+    nav>ul>li{margin-left:50px;}
+    .box{flex-direction:column; align-items:center;}
+    .flex-container{flex-direction:column;}
+}
+
+
+/*Work for pac man animation by Riccardo at codepen.io. 
+https://codepen.io/Ferie/pen/abBVeER link to the website*/
+
+/*
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    flex-direction: row;
+    justify-content: center; 
+    flex-direction: column; 
+    overflow: hidden;
+    height: 16vh;
+    width: 100%;
+    overflow:none;
+}
+
+.pacman {
+    position:relative;
+    background: transparent;
+    z-index: 1;
+    overflow:none;
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        top : -35px;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+        overflow:none;
+    }
+
+    &::before {
+        animation: chunk-top .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        overflow:none;
+    }
+
+    &::after {
+        animation: chunk-bottom .5s ease infinite;
+        border: 35px solid #FFCC00;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        overflow:none;
+    }
+}
+@keyframes chunk-top {
+    0%,
+    100% {
+        transform: rotate(-45deg);
+        overflow:none;
+    }
+    50% {
+        transform: rotate(-80deg);
+        overflow:none;
+    }
+}
+
+@keyframes chunk-bottom {
+    0%,
+    100% {
+        transform: rotate(-40deg);
+        overflow:none;
+    }
+    50% {
+        transform: rotate(0deg);
+        overflow:none;
+    }
+}*/
+    

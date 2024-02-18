@@ -1,0 +1,30 @@
+.blogMain{
+    background-color: darkred;
+}
+h1#topOfPage{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    animation:none;
+}
+h1#topOfPage:hover{
+    animation: wiggle 2s infinite;
+}
+@keyframes wiggle{
+    0% { transform: rotate(0deg); }
+   20% { transform: rotate(0deg); }
+   25% { transform: rotate(5deg); }
+   35% { transform: rotate(-5deg); }
+  40% { transform: rotate(0deg); }
+}
+section#boxForContnet
+{
+    display:flex;
+    flex-direction : row;
+    justify-content:space-around;
+}
+#box1{
+    width : 50vw;
+    font-size: 25px;
+    color: white;
+}
