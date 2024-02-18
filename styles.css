@@ -91,8 +91,8 @@ section>div>a{
 footer{
     display:flex;
     flex-direction:row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color : #333;
     color:white;
     font-size:25px;
@@ -102,16 +102,30 @@ footer{
     width:100%;
 }
 
-footer>p.move{
-    margin-right:15px;
-    font-size: 30px;
-    animation: slide-left 10s infinite;
+.rocket{
+    animation: slide-right 10s infinite;
 }
 /*my animation aspect*/
-@-webkit-keyframes slide-left{
-    0%{justify-content:flex-end;}
-    100%{justify-content:flex-start;}
-}
+@keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      /*transform: translateX(93vw);*/
+      transform:scaleX(1);
+    }
+    50%{
+        
+        transform: translateX(93vw) ;
+    }
+    75%{
+        transform:scaleX(1);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+  }
 
 @media(max-width : 600px)
 {
