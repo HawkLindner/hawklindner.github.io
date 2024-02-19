@@ -18,29 +18,29 @@ header{
 }
 aside.leftSide{
     grid-area: left;
-    width : 100;
-    height : 100;
+    width : 75vw;
+    height : 100vh;
     background-color : orange;
-    .pump{
-        width : 75vw;
-        height : 75vh;
-        border:2px solid black;
-        overflow:none;
-    }
+    
+}
+.pump{
+    width : 75vw;
+    height : 100vh;
+    border:2px solid black;
 }
 main{
     grid-area: center;
     background-color: yellow;
-    width : 100;
-    height : 100;
+    width : 75vw;
+    height : 50vh;
 }
 main>p{
     text-align: center;
 }
 aside.rightSide{
     grid-area: right;
-    width : 100;
-    height : 100;
+    width : 25vw;
+    height : auto;
     background-color:aqua;
     margin-top: -2.2vh;
 }
