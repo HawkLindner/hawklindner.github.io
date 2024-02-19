@@ -16,7 +16,7 @@ main{
   flex-wrap:wrap;
 }
 
-#vid { 
+.vid { 
     display:flex;
     align-items: center;
     flex-direction:column;
@@ -27,7 +27,7 @@ main{
     -webkit-transition-timing-function: ease; 
     } 
      
-#vid:hover { 
+.vid:hover { 
     transform: scale(1.2); 
     
     }
